@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natan - Social Media</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h1>Natan</h1>
+        <ul>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div id="logged-out">
+            <h2>Welcome to this social media.</h2>
+            <p>Natan is a simple social media website which focuses on interacting with users.</p>
+        </div>
+        <div id="logged-in" style="display: none;">
+            <h2>Recent Posts</h2>
+            <div id="posts-container"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f2ff; /* Light blue */
+    color: #003366; /* Dark blue */
+}
+
+nav {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+#posts-container {
+    background-color: #cce6ff;
+    padding: 10px;
+    border-radius: 5px;
+}
+// Simulating logged in and logged out state
+document.addEventListener('DOMContentLoaded', function() {
+    const loggedIn = false; // Change to true when logged in
+    const loggedOutSection = document.getElementById('logged-out');
+    const loggedInSection = document.getElementById('logged-in');
+
+    if (loggedIn) {
+        loggedOutSection.style.display = 'none';
+        loggedInSection.style.display = 'block';
+        // Fetch posts and render them
+        fetchPosts();
+    } else {
+        loggedOutSection.style.display = 'block';
+        loggedInSection.style.display = 'none';
+    }
+});
+
+function fetchPosts() {
+    const postsContainer = document.getElementById('posts-container');
+    // Dummy data for posts
+    const posts = [
+        { username: 'user1', content: 'First post!' },
+        { username: 'user2', content: 'Loving Natan!' }
+    ];
+
+    posts.forEach(post => {
+        const postDiv = document.createElement('div');
+        postDiv.innerHTML = `<strong>${post.username}</strong>: ${post.content}`;
+        postsContainer.appendChild(postDiv);
+    });
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="error-404">
+        <h1>404</h1>
+        <p>Oops! The page you’re looking for doesn’t exist.</p>
+        <a href="index.html">Go back to home</a>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Banned</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="banned-user">
+        <h1>Account Banned</h1>
+        <p>Your current behavior has violated the Rules or Privacy.</p>
+        <p>Ban Date: <span id="ban-date">MM/DD/YY</span></p>
+        <p><strong>Moderator note:</strong> Reason for ban will go here.</p>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Connection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="no-connection">
+        <h1>No Connection</h1>
+        <p>Looks like you are not connected to the Internet. Check your settings and try again.</p>
+        <button onclick="retryConnection()">Retry</button>
+    </div>
+
+    <script>
+        function retryConnection() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile">
+        <div class="banner" style="background-color: #003366;"></div>
+        <div class="profile-pic" style="background-image: url('default-profile.png');"></div>
+        <div class="about-section">
+            <h2>About</h2>
+            <p>This is the user's bio.</p>
+        </div>
+        <div class="posts-section">
+            <h2>Posts</h2>
+            <!-- User posts will go here -->
+        </div>
+        <div class="follow-stats">
+            <button>Follow</button>
+            <span>Followers: 100</span>
+            <span>Following: 50</span>
+        </div>
+    </div>
+</body>
+</html>
