@@ -205,3 +205,104 @@ nav {
 </div>
 <h1>404 - Page Not Found</h1>
 <p>We couldn't find the page you're looking for. <a href="index.html">Go back to home</a></p>
+/* General Blue Theme */
+body {
+  background-color: #e6f7ff; /* Light Blue Background */
+  color: #003366; /* Dark Blue Text */
+}
+
+/* Navbar */
+nav {
+  background-color: #003366; /* Dark Blue */
+  color: white;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+/* Buttons */
+button {
+  background-color: #00509e; /* Medium Blue */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003366; /* Darker on hover */
+}
+
+/* Profile Page */
+.profile-banner {
+  background-color: #003366; /* Banner Dark Blue */
+  height: 200px;
+  width: 100%;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 0; /* Square Image */
+  margin-top: -75px; /* Overlap the banner */
+  border: 5px solid white;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-info h2 {
+  color: #003366;
+}
+<!-- Logged Out Homepage -->
+<div class="homepage">
+  <h1>Welcome to this social media</h1>
+  <p>Natan is a simple social media website which focuses on interacting with users.</p>
+</div>
+<!-- Post Feed Page -->
+<div class="post-feed">
+  <h2>Your Feed</h2>
+  <!-- Example Post -->
+  <div class="post">
+    <h3>Username</h3>
+    <p>This is a post content...</p>
+  </div>
+  <!-- Add more posts here -->
+</div>
+<!-- Profile Page -->
+<div class="profile-banner"></div>
+<img class="profile-pic" src="profile.png" alt="Profile Picture">
+<div class="profile-info">
+  <h2>Username</h2>
+  <p>Bio about the user</p>
+  <span>Followers: 100</span>
+  <span>Following: 50</span>
+  <button>Follow</button>
+</div>
+<!-- Explore Page -->
+<div class="explore">
+  <h2>Discover Users</h2>
+  <div class="explore-user">
+    <img src="user1.png" class="user-pic" alt="User 1">
+    <h3>User 1</h3>
+    <button>Follow</button>
+  </div>
+  <!-- Add more users similarly -->
+</div>
+<!-- 404 Error Page -->
+<h1>404 - Page Not Found</h1>
+<p>We couldn't find the page you were looking for.</p>
+<a href="index.html">Return to Home</a>
+- index.html
+- profile.html
+- explore.html
+- error404.html
+- css/
+  - style.css
+- js/
+  - app.js
+- img/
+  - profile.png
