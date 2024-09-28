@@ -3,117 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natan - Social Media</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Natan - Welcome</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <h1>Natan</h1>
         <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="explore.html">Explore</a></li>
-            <li><a href="profile.html">Profile</a></li>
             <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="guidelines.html">Rules</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <section id="home">
-        <div id="logged-out">
-            <h2>Welcome to this social media.</h2>
-            <p>Natan is a simple social media website which focuses on interacting with users.</p>
-        </div>
-        <div id="logged-in" style="display: none;">
-            <h2>Recent Posts</h2>
-            <div id="posts-container"></div>
-        </div>
-    </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e6f2ff; /* Light blue */
-    color: #003366; /* Dark blue */
-}
-
-nav {
-    background-color: #003366;
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    padding: 20px;
-}
-
-#posts-container {
-    background-color: #cce6ff;
-    padding: 10px;
-    border-radius: 5px;
-}
-// Simulating logged in and logged out state
-document.addEventListener('DOMContentLoaded', function() {
-    const loggedIn = false; // Change to true when logged in
-    const loggedOutSection = document.getElementById('logged-out');
-    const loggedInSection = document.getElementById('logged-in');
-
-    if (loggedIn) {
-        loggedOutSection.style.display = 'none';
-        loggedInSection.style.display = 'block';
-        // Fetch posts and render them
-        fetchPosts();
-    } else {
-        loggedOutSection.style.display = 'block';
-        loggedInSection.style.display = 'none';
-    }
-});
-
-function fetchPosts() {
-    const postsContainer = document.getElementById('posts-container');
-    // Dummy data for posts
-    const posts = [
-        { username: 'user1', content: 'First post!' },
-        { username: 'user2', content: 'Loving Natan!' }
-    ];
-
-    posts.forEach(post => {
-        const postDiv = document.createElement('div');
-        postDiv.innerHTML = `<strong>${post.username}</strong>: ${post.content}`;
-        postsContainer.appendChild(postDiv);
-    });
-}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="error-404">
-        <h1>404</h1>
-        <p>Oops! The page you’re looking for doesn’t exist.</p>
-        <a href="index.html">Go back to home</a>
+    <div class="content">
+        <h1>Welcome to Natan</h1>
+        <p>Natan is a simple social media website which focuses on interacting with users.</p>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Natan</p>
+    </footer>
 </body>
 </html>
 <!DOCTYPE html>
@@ -121,38 +34,142 @@ function fetchPosts() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Banned</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="banned-user">
-        <h1>Account Banned</h1>
-        <p>Your current behavior has violated the Rules or Privacy.</p>
-        <p>Ban Date: <span id="ban-date">MM/DD/YY</span></p>
-        <p><strong>Moderator note:</strong> Reason for ban will go here.</p>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Connection</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="no-connection">
-        <h1>No Connection</h1>
-        <p>Looks like you are not connected to the Internet. Check your settings and try again.</p>
-        <button onclick="retryConnection()">Retry</button>
-    </div>
-
-    <script>
-        function retryConnection() {
-            location.reload();
+    <title>404 - Not Found</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #e6f7ff;
+            font-family: Arial, sans-serif;
+            color: #003366;
+            text-align: center;
+            padding-top: 50px;
         }
-    </script>
+        h1 { font-size: 3em; color: #00509e; }
+        p { font-size: 1.2em; margin-bottom: 20px; }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00509e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        a:hover { background-color: #003366; }
+    </style>
+</head>
+<body>
+    <h1>404 - Page Not Found</h1>
+    <p>We couldn't find the page you're looking for.</p>
+    <a href="index.html">Go Back to Home</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="guidelines.html">Rules</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Notifications</h1>
+        <div class="notification">
+            <span class="bell-icon">🔔</span>
+            <span class="notification-count">5</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Natan</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background-color: #e6f7ff; color: #003366; }
+        h1 { color: #00509e; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="guidelines.html">Rules</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Rules</h1>
+        <p>Natan is a friendly and welcoming community. We welcome everyone to help maintain a constructive space by following the guidelines below.</p>
+        <ul>
+            <li>Treat everyone with respect: Do not insult, abuse, or threaten other users, off-site or on-site.</li>
+            <li>Be safe: Keep personal and contact information private.</li>
+            <li>Be honest: Do not impersonate others or intentionally spread disinformation.</li>
+            <li>Try not to break the site: Report any security issues.</li>
+            <li>Have fun: Keep it a fun and safe place for everyone.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Natan</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="guidelines.html">Rules</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Explore Users</h1>
+        <p>Discover and follow new users!</p>
+        <!-- User cards can be added here -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Natan</p>
+    </footer>
 </body>
 </html>
 <!DOCTYPE html>
@@ -161,409 +178,116 @@ function fetchPosts() {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="profile">
-        <div class="banner" style="background-color: #003366;"></div>
-        <div class="profile-pic" style="background-image: url('default-profile.png');"></div>
-        <div class="about-section">
-            <h2>About</h2>
-            <p>This is the user's bio.</p>
-        </div>
-        <div class="posts-section">
-            <h2>Posts</h2>
-            <!-- User posts will go here -->
-        </div>
-        <div class="follow-stats">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="guidelines.html">Rules</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>User Profile</h1>
+        <div class="profile-header">
+            <img src="path/to/profile-pic.png" alt="Profile Picture" class="profile-pic">
+            <h2>Username</h2>
+            <p>About this user...</p>
             <button>Follow</button>
-            <span>Followers: 0</span>
-            <span>Following: 0</span>
+            <p>Followers: 10 | Following: 5</p>
         </div>
+        <h3>Posts</h3>
+        <!-- Posts can be listed here -->
     </div>
+
+    <footer>
+        <p>&copy; 2024 Natan</p>
+    </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="guidelines.html">Rules</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Privacy Policy</h1>
+        <p>Natan is a social media made in Sweden. You have to be 12 or older to use Natan.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Natan</p>
+    </footer>
+</body>
+</html>
+body {
+    background-color: #e6f7ff; /* Light Blue */
+    color: #003366; /* Dark Blue for Text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 nav {
-    background-color: #003366; /* Dark Blue */
-    position: fixed;
-    top: 0;
-    width: 100%;
+    background-color: #00509e; /* Dark Blue */
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00509e; /* Dark Blue */
     color: white;
 }
-<div class="profile-banner" style="background-color: #003366;"></div>
-<img class="profile-pic" src="default-profile.png" alt="Profile Picture">
-<div class="profile-info">
-    <h2>Username</h2>
-    <p>Bio about the user.</p>
-    <span>Followers: 100</span>
-    <span>Following: 50</span>
-</div>
-<div class="explore-user">
-    <img class="user-pic" src="user1.png" alt="User Profile">
-    <h3>Username</h3>
-    <button>Follow</button>
-</div>
-<h1>404 - Page Not Found</h1>
-<p>We couldn't find the page you're looking for. <a href="index.html">Go back to home</a></p>
-/* General Blue Theme */
-body {
-  background-color: #e6f7ff; /* Light Blue Background */
-  color: #003366; /* Dark Blue Text */
-}
 
-/* Navbar */
-nav {
-  background-color: #003366; /* Dark Blue */
-  color: white;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 100;
-}
-
-/* Buttons */
-button {
-  background-color: #00509e; /* Medium Blue */
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #003366; /* Darker on hover */
-}
-
-/* Profile Page */
-.profile-banner {
-  background-color: #003366; /* Banner Dark Blue */
-  height: 200px;
-  width: 100%;
+.content {
+    padding: 20px;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 0; /* Square Image */
-  margin-top: -75px; /* Overlap the banner */
-  border: 5px solid white;
+    width: 100px; /* Adjust size */
+    height: 100px; /* Adjust size */
+    border-radius: 50%; /* Circle */
 }
-
-.profile-info {
-  text-align: center;
-}
-
-.profile-info h2 {
-  color: #003366;
-}
-<!-- Logged Out Homepage -->
-<div class="homepage">
-  <h1>Welcome to this social media</h1>
-  <p>Natan is a simple social media website which focuses on interacting with users.</p>
-</div>
-<!-- Post Feed Page -->
-<div class="post-feed">
-  <h2>Your Feed</h2>
-  <!-- Example Post -->
-  <div class="post">
-    <h3>Username</h3>
-    <p>This is a post content...</p>
-  </div>
-  <!-- Add more posts here -->
-</div>
-<!-- Profile Page -->
-<div class="profile-banner"></div>
-<img class="profile-pic" src="profile.png" alt="Profile Picture">
-<div class="profile-info">
-  <h2>Username</h2>
-  <p>Bio about the user</p>
-  <span>Followers: 100</span>
-  <span>Following: 50</span>
-  <button>Follow</button>
-</div>
-<!-- Explore Page -->
-<div class="explore">
-  <h2>Discover Users</h2>
-  <div class="explore-user">
-    <img src="user1.png" class="user-pic" alt="User 1">
-    <h3>User 1</h3>
-    <button>Follow</button>
-  </div>
-  <!-- Add more users similarly -->
-</div>
-<!-- 404 Error Page -->
-<h1>404 - Page Not Found</h1>
-<p>We couldn't find the page you were looking for.</p>
-<a href="index.html">Return to Home</a>
-- index.html
-- profile.html
-- explore.html
-- error404.html
-- css/
-  - style.css
-- js/
-  - app.js
-- img/
-  - profile.png
-/* General Page Styling */
-body {
-  background-color: #e6f7ff; /* Light Blue */
-  font-family: Arial, sans-serif;
-  color: #003366; /* Dark Blue for Text */
-  margin: 0;
-  padding: 0;
-}
-
-/* Navbar */
-nav {
-  background-color: #003366; /* Dark Blue */
-  color: white;
-  padding: 15px;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Buttons */
-button {
-  background-color: #00509e; /* Blue Button */
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #003366; /* Darker Blue on Hover */
-}
-
-/* Profile Page Styling */
-.profile-banner {
-  background-color: #003366; /* Dark Blue Banner */
-  height: 200px;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 0; /* Square Image */
-  border: 5px solid white;
-  position: relative;
-  top: -75px; /* Overlapping the banner */
-}
-
-.profile-info {
-  text-align: center;
-}
-
-.profile-info h2 {
-  color: #003366;
-}
-
-.profile-info span {
-  display: block;
-  margin: 5px 0;
-}
-
-/* Explore Page */
-.explore-user {
-  display: inline-block;
-  width: 200px;
-  margin: 20px;
-  text-align: center;
-}
-
-.explore-user img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Natan - Welcome</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="explore.html">Explore</a>
-    <a href="login.html">Login</a>
-    <a href="signup.html">Sign Up</a>
-  </nav>
-  
-  <div class="homepage" style="padding-top: 80px;">
-    <h1>Welcome to Natan</h1>
-    <p>Natan is a simple social media website which focuses on interacting with users.</p>
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Natan - Feed</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="explore.html">Explore</a>
-    <a href="profile.html">Profile</a>
-    <a href="logout.html">Logout</a>
-  </nav>
-  
-  <div class="post-feed" style="padding-top: 80px;">
-    <h2>Your Feed</h2>
-    <!-- Example Post -->
-    <div class="post" style="background-color: #ffffff; padding: 10px; margin-bottom: 10px; border: 1px solid #cccccc;">
-      <h3>User123</h3>
-      <p>This is a post content...</p>
-    </div>
-    <!-- Add more posts here -->
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Natan - Profile</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="explore.html">Explore</a>
-    <a href="profile.html">Profile</a>
-    <a href="logout.html">Logout</a>
-  </nav>
-  
-  <div class="profile-banner"></div>
-  <div class="profile-content" style="text-align: center; padding-top: 50px;">
-    <img class="profile-pic" src="default-profile.png" alt="Profile Picture">
-    <div class="profile-info">
-      <h2>Username</h2>
-      <p>Bio about the user.</p>
-      <span>Followers: 100</span>
-      <span>Following: 50</span>
-      <button>Follow</button>
-    </div>
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Natan - Explore</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="explore.html">Explore</a>
-    <a href="profile.html">Profile</a>
-    <a href="logout.html">Logout</a>
-  </nav>
-  
-  <div class="explore" style="padding-top: 80px;">
-    <h2>Discover Users</h2>
-    <!-- Example User -->
-    <div class="explore-user">
-      <img src="user1.png" alt="User1">
-      <h3>User 1</h3>
-      <button>Follow</button>
-    </div>
-    <!-- Add more users here -->
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>404 - Not Found</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div style="text-align: center; padding-top: 100px;">
-    <h1>404 - Page Not Found</h1>
-    <p>We couldn't find the page you're looking for.</p>
-    <a href="index.html">Go Back to Home</a>
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Not Found</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background-color: #e6f7ff; /* Light Blue */
-      font-family: Arial, sans-serif;
-      color: #003366; /* Dark Blue for Text */
-      text-align: center;
-      padding-top: 50px;
-    }
-
-    h1 {
-      font-size: 3em;
-      color: #00509e; /* Darker Blue */
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-
-    a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #00509e; /* Blue Button */
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-
-    a:hover {
-      background-color: #003366; /* Darker Blue on Hover */
-    }
-
-    /* Responsive for mobile */
-    @media only screen and (max-width: 600px) {
-      h1 {
-        font-size: 2.5em;
-      }
-
-      p {
-        font-size: 1em;
-      }
-
-      a {
-        padding: 8px 15px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <h1>404 - Page Not Found</h1>
-  <p>We couldn't find the page you're looking for.</p>
-  <a href="index.html">Go Back to Home</a>
-</body>
-</html>
