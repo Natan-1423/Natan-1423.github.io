@@ -88,8 +88,131 @@ button {
 </html>
 
 button:hover {
-    background-color: #003366; /* Darker button on hover */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natan - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Natan</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Welcome to this social media.</h1>
+    <p>Natan is a simple social media website which focuses on interacting with users.</p>
+    <div class="explore-section">
+      <h2>Explore Users</h2>
+      <div class="user-profile">
+        <img src="default-profile.png" alt="User Profile">
+        <p>User Name</p>
+        <button>Follow</button>
+      </div>
+      <!-- Repeat user profile as needed -->
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 Natan</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natan - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Natan</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Welcome to this social media.</h1>
+    <p>Natan is a simple social media website which focuses on interacting with users.</p>
+    <div class="explore-section">
+      <h2>Explore Users</h2>
+      <div class="user-profile">
+        <img src="default-profile.png" alt="User Profile">
+        <p>User Name</p>
+        <button>Follow</button>
+      </div>
+      <!-- Repeat user profile as needed -->
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 Natan</p>
+  </footer>
+</body>
+</html>
+body {
+  background-color: #f0f8ff; /* Light blue background */
+  font-family: Arial, sans-serif;
+  color: #333;
 }
-<a href="register.html" style="text-decoration: none;">
-    <button>Create an Account</button>
-</a>
+
+header {
+  background-color: #007BFF; /* Darker blue for header */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.explore-section {
+  margin: 20px;
+}
+
+.user-profile {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
