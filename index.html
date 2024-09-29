@@ -305,3 +305,157 @@ footer {
 </html>
 <a href="explore.html">Explore</a>
 <link rel="stylesheet" href="style.css">
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Light blue background */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header Navigation */
+header {
+  background-color: #005f99; /* Dark blue */
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.welcome-section h1 {
+  font-size: 36px;
+  color: #005f99;
+}
+
+.welcome-section p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Explore Section */
+.explore-section {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.explore-section h2 {
+  font-size: 28px;
+  color: #005f99;
+}
+
+.user-card {
+  background-color: #e3f2fd; /* Light blue */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.user-card .profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.user-card h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.follow-button {
+  background-color: #005f99;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.follow-button:hover {
+  background-color: #003f6b;
+}
+
+/* Footer */<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natan - Social Media</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcome-section">
+      <h1>Welcome to this social media.</h1>
+      <p>Natan is a simple social media website which focuses on interacting with users.</p>
+    </section>
+
+    <section class="explore-section">
+      <h2>Explore Users</h2>
+      <p>Discover new users to follow.</p>
+      <div class="user-card">
+        <img src="user-profile.png" alt="User Profile" class="profile-pic">
+        <h3>User Name</h3>
+        <button class="follow-button">Follow</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Natan</p>
+  </footer>
+</body>
+</html>
+
+footer {
+  background-color: #005f99;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
