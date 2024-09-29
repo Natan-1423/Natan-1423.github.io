@@ -1,0 +1,95 @@
+body {
+    background-color: #e0f0ff; /* Light blue background */
+    color: #003366; /* Dark blue text */
+    font-family: Arial, sans-serif; /* Change to a modern font */
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #00509e; /* Heading color */
+}
+
+nav {
+    background-color: #00509e; /* Darker blue for the navbar */
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #003366; /* Darker blue on hover */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.user-profile {
+    border: 1px solid #ccc; /* Add a border to user profile */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff; /* White background for profiles */
+    width: 80%; /* Adjust width */
+}
+
+button {
+    background-color: #00509e; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natan - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="profile.html">Profile</a>
+        <a href="rules.html">Rules</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to this social media.</h1>
+        <p>Natan is a simple social media website which focuses on interacting with users.</p>
+        <a href="register.html" style="text-decoration: none;">
+            <button>Create an Account</button>
+        </a>
+        <h2>Explore Users</h2>
+        <div class="user-profile">
+            <img src="default-profile-pic.png" alt="User Profile" style="width:50px;height:50px;">
+            <p>User Name</p>
+            <button>Follow</button>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Natan</p>
+    </footer>
+</body>
+</html>
+
+button:hover {
+    background-color: #003366; /* Darker button on hover */
+}
+<a href="register.html" style="text-decoration: none;">
+    <button>Create an Account</button>
+</a>
