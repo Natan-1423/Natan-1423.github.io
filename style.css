@@ -171,3 +171,59 @@ body {
 .welcome p {
     margin-top: 10px; /* Space below the title */
 }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #007BFF; /* Blue background */
+    color: white; /* Text color */
+}
+
+.navbar {
+    background-color: #0056b3; /* Darker blue for the navbar */
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.welcome {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.welcome h1 {
+    font-weight: bold; /* Bold title */
+}
+
+.welcome p {
+    margin-top: 10px; /* Space below the title */
+}
+
+.buttons {
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.btn {
+    background-color: white; /* Button background */
+    color: #007BFF; /* Button text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 10px; /* Space between buttons */
+    font-weight: bold;
+}
