@@ -36,3 +36,17 @@
   </footer>
 </body>
 </html>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li id="profile-link" style="display: none;"><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<script>
+    const isLoggedIn = /* your logic here */;
+    if (isLoggedIn) {
+        document.getElementById('profile-link').style.display = 'block';
+    }
+</script>
