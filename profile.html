@@ -3,6 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Check if user is logged in
+        var isLoggedIn = false; // Set this based on your login logic
+
+        if (!isLoggedIn) {
+            // Redirect to home page or login page
+            window.location.href = 'index.html'; // Change to your login page if necessary
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="rules.html">Rules</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Your Profile</h1>
+            <!-- Profile content goes here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Natan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Natan</title>
     <link rel="stylesheet" href="style.css">
 </head>
