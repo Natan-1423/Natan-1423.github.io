@@ -40,3 +40,11 @@ def register_submit():
 python app.py
 chmod +x start_flask.sh
 ./start_flask.sh
+flask run --app app.py
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, World!"
+
