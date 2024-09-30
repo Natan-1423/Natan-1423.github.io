@@ -314,3 +314,42 @@ h1 {
 p {
     font-size: 1.2em; /* Slightly larger paragraph text */
 }
+body {
+    background-color: #003366; /* Blue background */
+    color: white; /* White text color */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+nav {
+    background-color: #004080; /* Darker blue for navigation */
+    padding: 10px; /* Padding around nav */
+}
+
+nav ul {
+    list-style-type: none; /* No bullets */
+    padding: 0; /* Remove default padding */
+}
+
+nav li {
+    display: inline; /* Inline list items */
+    margin-right: 20px; /* Spacing between items */
+}
+
+nav a {
+    color: white; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+.welcome {
+    text-align: center; /* Centered text */
+    margin-top: 50px; /* Margin at the top */
+}
+
+.welcome-title {
+    font-weight: bold; /* Bold text */
+    font-size: 2.5em; /* Larger font size */
+}
+
+.welcome-description {
+    font-size: 1.2em; /* Smaller font size */
+}
