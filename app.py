@@ -1,10 +1,6 @@
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template, redirect, url_for
 
 app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return render_template('index.html')
 
 @app.route('/register_submit', methods=['POST'])
 def register_submit():
@@ -12,8 +8,5 @@ def register_submit():
     username = request.form['username']
     birthday = request.form['birthday']
     password = request.form['password']
-    # Add logic to save this data, validate, etc.
-    return redirect('/')
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    # Add logic to save this data
+    return redirect(url_for('success'))  # Redirect to a success page or homepage
