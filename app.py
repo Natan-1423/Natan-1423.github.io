@@ -37,3 +37,6 @@ if __name__ == '__main__':
 def register_submit():
     # Handle registration logic here
     pass
+python app.py
+chmod +x start_flask.sh
+./start_flask.sh
