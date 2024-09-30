@@ -75,3 +75,46 @@ footer {
   width: 100%;
   bottom: 0;
 }
+/* Active Nav Link */
+nav ul li a.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+
+/* Explore Page Styles */
+.user-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.user {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #004a7c;
+  border-radius: 10px;
+  width: 200px;
+  background-color: #e0f7ff;
+}
+
+.user img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.follow-btn {
+  margin-top: 10px;
+  background-color: #006bb3;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.follow-btn:hover {
+  background-color: #004a7c;
+}
