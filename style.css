@@ -298,3 +298,62 @@ nav ul li a {
 .login-form button:hover {
   background-color: #004a7c;
 }
+/* Settings Page Styles */
+.settings-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #4A4EFF;
+}
+
+.profile-settings {
+  margin-top: 20px;
+}
+
+.profile-info, .banner-settings, .username-settings {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-info img.profile-pic-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+input.input-field {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.remove {
+  color: #FF4A4A;
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.update-button {
+  background-color: #4A4EFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-button:hover {
+  background-color: #3a3ae6;
+}
