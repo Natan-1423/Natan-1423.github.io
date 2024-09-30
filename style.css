@@ -352,6 +352,65 @@ input.input-field {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    background-color: #4c6ef5; /* Dark blue for navigation bar */
+    padding: 15px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.contact-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    color: #4c6ef5;
+}
+
+.contact-details p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.contact-details a {
+    color: #4c6ef5;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #4c6ef5;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
 }
 
 .update-button:hover {
