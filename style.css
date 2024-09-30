@@ -161,3 +161,44 @@ nav ul li a.active {
 .register-form button:hover {
   background-color: #004a7c;
 }
+/* Login Form */
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #e0f7ff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #004a7c;
+}
+
+.login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #004a7c;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #004a7c;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #006bb3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #004a7c;
+}
