@@ -127,3 +127,34 @@ h1, h2 {
     color: #007bff; /* Blue text */
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+h1 {
+    color: #007bff; /* A shade of blue */
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+}
