@@ -59,3 +59,12 @@
     </div>
 </body>
 </html>
+<div id="profile-content" style="display: none;">
+    <h1>Your Profile</h1>
+    <!-- Profile content goes here -->
+</div>
+<script>
+    if (isLoggedIn) {
+        document.getElementById('profile-content').style.display = 'block';
+    }
+</script>
