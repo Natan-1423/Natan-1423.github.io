@@ -2,23 +2,21 @@ from flask import Flask, request, redirect, url_for
 
 app = Flask(__name__)
 
-@app.route('/register', methods=['POST'])
-def register():
-    email = request.form.get('email')
-    username = request.form.get('username')
-    birthday = request.form.get('birthday')
-    password = request.form.get('password')
+@app.route('/register_submit', methods=['POST'])
+def register_submit():
+    email = request.form['email']
+    username = request.form['username']
+    birthday = request.form['birthday']
+    password = request.form['password']
+    
+    # Here you would add your logic to save the data
+    # e.g., save to a database or file
 
-    # Here you would normally save the user information to a database
-    # For demonstration, we'll just print it to the console
-    print(f'Registering user: {username}, Email: {email}, Birthday: {birthday}')
+    return redirect(url_for('success'))  # Redirect to a success page
 
-    # Redirect to a login page or homepage after registration
-    return redirect(url_for('login'))
-
-@app.route('/login')
-def login():
-    return "Login Page"
+@app.route('/success')
+def success():
+    return "Registration Successful!"
 
 if __name__ == '__main__':
     app.run(debug=True)
