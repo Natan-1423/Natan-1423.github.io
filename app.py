@@ -16,3 +16,20 @@ def login_submit():
     password = request.form['password']
     # Add logic to validate the user credentials here
     return redirect(url_for('homepage'))  # Redirect to the homepage or another page
+from flask import Flask, request, redirect, url_for, render_template
+
+app = Flask(__name__)
+
+@app.route('/login_submit', methods=['POST'])
+def login_submit():
+    username = request.form['username']
+    password = request.form['password']
+    # Add your authentication logic here
+    return redirect(url_for('home'))
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
