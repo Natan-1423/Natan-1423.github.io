@@ -1,6 +1,10 @@
-from flask import Flask, request, redirect, url_for
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
 
 @app.route('/register_submit', methods=['POST'])
 def register_submit():
@@ -9,14 +13,10 @@ def register_submit():
     birthday = request.form['birthday']
     password = request.form['password']
     
-    # Here you would add your logic to save the data
-    # e.g., save to a database or file
+    # Here, process the data (e.g., save to a database)
+    # Validate data as necessary.
 
-    return redirect(url_for('success'))  # Redirect to a success page
-
-@app.route('/success')
-def success():
-    return "Registration Successful!"
+    return "Registration successful!"
 
 if __name__ == '__main__':
     app.run(debug=True)
