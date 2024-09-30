@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Natan - Account Banned</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li id="profile-link" style="display: none;"><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="banned-notice">
+        <h1 style="font-weight: bold;">Account Banned</h1>
+        <p>Your current behavior has violated the Rules or Privacy.</p>
+        <p>Ban Date: <span id="ban-date">09/30/2024</span></p>
+        <p class="moderator-note">Moderator Note: Please review the community guidelines.</p>
+    </div>
+    
+    <div class="logout">
+        <p>You must <a href="index.html" onclick="logout()">log out</a> to continue.</p>
+    </div>
+
+    <script>
+        function logout() {
+            // Clear user session or token
+            localStorage.removeItem('userLoggedIn');
+            alert('You have been logged out.');
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .banned-notice {
+            background-color: #ffcccc;
+            border: 2px solid #ff0000;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .moderator-note {
+            font-style: italic;
+        }
+
+        .logout {
+            margin-top: 20px;
+        }
+
+        nav {
+            background-color: #5b92e5;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</body>
+</html>
