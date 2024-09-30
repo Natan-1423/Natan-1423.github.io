@@ -33,3 +33,7 @@ def login():
 
 if __name__ == '__main__':
     app.run(debug=True)
+@app.route('/register_submit', methods=['POST'])
+def register_submit():
+    # Handle registration logic here
+    pass
