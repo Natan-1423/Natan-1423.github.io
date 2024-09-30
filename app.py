@@ -65,4 +65,16 @@ def register_submit():
 @app.route('/success')
 def success():
     return "Registration successful!"
+# Other routes...
+
+@app.route('/register_submit', methods=['POST'])
+def register_submit():
+    email = request.form['email']
+    username = request.form['username']
+    password = request.form['password']
+    birthday = request.form['birthday']
+    
+    # Process the form data (validate, save to database, etc.)
+    
+    return 'Registration successful'
 
