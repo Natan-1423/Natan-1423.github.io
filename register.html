@@ -1,7 +1,29 @@
-<form action="/register_submit" method="POST"> <!-- Ensure the action points to the correct URL -->
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="date" name="birthday" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="submit" value="Register">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Natan - Register</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+        </ul>
+    </nav>
+    <div class="form-container">
+        <h2>Create an Account</h2>
+        <form action="/register_submit" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="date" name="birthday" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
