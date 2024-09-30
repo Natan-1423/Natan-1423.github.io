@@ -6,17 +6,15 @@ app = Flask(__name__)
 def register():
     return render_template('register.html')
 
-@app.route('/register_submit', methods=['POST'])
+@app.route('/register_submit', methods=['POST'])  # Ensure you specify POST here
 def register_submit():
     email = request.form['email']
     username = request.form['username']
     birthday = request.form['birthday']
     password = request.form['password']
-    
-    # Here, process the data (e.g., save to a database)
-    # Validate data as necessary.
 
-    return "Registration successful!"
+    # Process the data (save, validate, etc.)
+    return "Registration Successful!"  # Redirect or render a success page
 
 if __name__ == '__main__':
     app.run(debug=True)
