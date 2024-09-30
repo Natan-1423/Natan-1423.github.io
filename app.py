@@ -47,4 +47,22 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return "Hello, World!"
+from flask import Flask, request, redirect, url_for
+
+app = Flask(__name__)
+
+@app.route('/register_submit', methods=['POST'])
+def register_submit():
+    email = request.form['email']
+    username = request.form['username']
+    password = request.form['password']
+    birthday = request.form['birthday']
+    
+    # Process the form data (e.g., save to database)
+    
+    return redirect(url_for('success'))
+
+@app.route('/success')
+def success():
+    return "Registration successful!"
 
