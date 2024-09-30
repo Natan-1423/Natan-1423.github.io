@@ -416,3 +416,61 @@ footer {
 .update-button:hover {
   background-color: #3a3ae6;
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    background-color: #4c6ef5; /* Dark blue for navigation bar */
+    padding: 15px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.privacy-section {
+    padding: 50px;
+    text-align: left;
+}
+
+.privacy-section h1 {
+    color: #4c6ef5;
+}
+
+.privacy-section h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.privacy-section p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #4c6ef5;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
