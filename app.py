@@ -1,20 +1,19 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 
 app = Flask(__name__)
 
-@app.route('/register')
-def register():
-    return render_template('register.html')
+@app.route('/')
+def home():
+    return render_template('index.html')
 
-@app.route('/register_submit', methods=['POST'])  # Ensure you specify POST here
+@app.route('/register_submit', methods=['POST'])
 def register_submit():
     email = request.form['email']
     username = request.form['username']
     birthday = request.form['birthday']
     password = request.form['password']
-
-    # Process the data (save, validate, etc.)
-    return "Registration Successful!"  # Redirect or render a success page
+    # Add logic to save this data, validate, etc.
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)
