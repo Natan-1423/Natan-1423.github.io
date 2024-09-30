@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
-</head>
-<body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="/login_submit" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p><a href="/register">Create an account</a></p>
-    </div>
-</body>
-</html>
+from flask import Flask, request, redirect, url_for, render_template
+
+app = Flask(__name__)
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/login_submit', methods=['POST'])
+def login_submit():
+    username = request.form['username']
+    password = request.form['password']
+    # Authentication logic goes here
+    return redirect(url_for('home'))  # Redirect after login
+
+if __name__ == '__main__':
+    app.run(debug=True)
