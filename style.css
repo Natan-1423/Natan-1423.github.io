@@ -118,3 +118,46 @@ nav ul li a.active {
 .follow-btn:hover {
   background-color: #004a7c;
 }
+/* Registration Form */
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #e0f7ff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #004a7c;
+}
+
+.register-form .form-group {
+  margin-bottom: 15px;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #004a7c;
+}
+
+.register-form input[type="email"],
+.register-form input[type="text"],
+.register-form input[type="password"],
+.register-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #004a7c;
+  border-radius: 5px;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #006bb3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #004a7c;
+}
