@@ -276,3 +276,41 @@ p {
 .registration-form button:hover {
     background-color: #004494; /* Even darker on hover */
 }
+body {
+    background-color: #3498db; /* Blue background */
+    color: white; /* Text color */
+    font-family: Arial, sans-serif; /* Font style */
+    text-align: center; /* Center align text */
+    margin: 0;
+    padding: 20px;
+}
+
+nav {
+    background-color: #2980b9; /* Darker blue for navigation */
+    padding: 10px 0; /* Padding for nav */
+}
+
+nav ul {
+    list-style-type: none; /* No bullet points */
+    padding: 0;
+}
+
+nav li {
+    display: inline; /* Horizontal list */
+    margin: 0 15px; /* Spacing between items */
+}
+
+nav a {
+    color: white; /* Link color */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold links */
+}
+
+h1 {
+    font-size: 2.5em; /* Large heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+p {
+    font-size: 1.2em; /* Slightly larger paragraph text */
+}
