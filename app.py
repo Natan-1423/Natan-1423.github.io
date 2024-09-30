@@ -10,3 +10,9 @@ def register_submit():
     password = request.form['password']
     # Add logic to save this data
     return redirect(url_for('success'))  # Redirect to a success page or homepage
+@app.route('/login_submit', methods=['POST'])
+def login_submit():
+    username = request.form['username']
+    password = request.form['password']
+    # Add logic to validate the user credentials here
+    return redirect(url_for('homepage'))  # Redirect to the homepage or another page
