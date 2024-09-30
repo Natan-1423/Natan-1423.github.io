@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Natan</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+      <div class="user-info">
+        <img src="user-profile.jpg" alt="User Profile" class="profile-pic">
+        <span>natan-1423</span>
+        <a href="notifications.html"><img src="bell-icon.png" alt="Notifications" class="icon"></a>
+        <a href="settings.html"><img src="settings-icon.png" alt="Settings" class="icon"></a>
+        <a href="logout.html"><img src="logout-icon.png" alt="Logout" class="icon"></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="settings-page">
+    <h1>Settings</h1>
+    
+    <section class="profile-settings">
+      <h2>Profile</h2>
+      <div class="profile-info">
+        <img src="user-profile.jpg" alt="Profile Picture" class="profile-pic-large">
+        <a href="#" class="remove">Remove</a>
+      </div>
+
+      <div class="banner-settings">
+        <label for="banner">Banner:</label>
+        <input type="file" id="banner" name="banner">
+        <a href="#" class="remove">Remove</a>
+      </div>
+
+      <div class="username-settings">
+        <label for="username">Username:</label>
+        <input type="text" id="username" value="natan-1423" class="input-field">
+      </div>
+
+  
+
+     <button class="update-button">Update</button>
+    </section>
+  </main>
+</body>
+</html>
