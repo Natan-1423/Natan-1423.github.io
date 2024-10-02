@@ -8,3 +8,4 @@ def register_submit():
     # Process the data (save to database, validate, etc.)
     
     return 'Registration successful'
+flask run
