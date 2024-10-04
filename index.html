@@ -3,31 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natan - Social Media</title>
     <link rel="stylesheet" href="style.css">
+    <title>Natan - Social Media</title>
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Log In</a></li>
-        </ul>
-    </nav>
-
-    <div class="text-container">
-        <h1 class="welcome-text">Welcome to this social media</h1>
-        <p class="description-text">Natan, a social media where users can connect with people.</p>
-        <div class="buttons-container">
-            <button class="signup-button">Sign Up</button>
-            <button class="login-button">Log In</button>
-        </div>
+    <div class="navbar">
+        <h1>Natan</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">Sign Up</a>
+            <a href="#">Log In</a>
+        </nav>
     </div>
 
-    <footer>
-        <p>Privacy | Contact | Rules</p>
+    <div class="text-container">
+        <h2>Welcome to this social media</h2>
+        <p>Natan is a simple social media website which focuses on interacting with users.</p>
+    </div>
+
+    <footer class="footer">
+        <p><a href="#">Privacy</a> | <a href="#">Contact</a> | <a href="#">Rules</a></p>
         <p>2024 Natan</p>
     </footer>
+
+    <button id="mode-toggle">Toggle Dark/Light Mode</button>
+
+    <script>
+        const toggleButton = document.getElementById('mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
