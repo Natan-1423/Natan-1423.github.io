@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Natan - Explore</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - Natan</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Explore Users</h1>
-  </header>
+    <header>
+        <nav>
+            <div class="logo"><img src="triangle_logo.png" alt="Natan Logo"></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="register.html">Sign Up</a></li>
+                <li><a href="login.html">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="profile.html">Profile</a></li>
-      <li><a href="explore.html" class="active">Explore</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <main>
+        <h1>Explore</h1>
+        <input type="text" placeholder="Search users..." class="search-bar">
+        
+        <section class="top-users">
+            <h2>Top Users</h2>
+            <div class="user-list">
+                <div class="user">
+                    <img src="default_profile_pic.png" alt="User">
+                    <p>Username1</p>
+                </div>
+                <div class="user">
+                    <img src="default_profile_pic.png" alt="User">
+                    <p>Username2</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- Main Content -->
-  <main>
-    <section>
-      <h2>Discover and Follow Users</h2>
-      <div class="user-list">
-        <div class="user">
-          <img src="default-pfp.png" alt="User 1" class="profile-pic">
-          <h3>Username1</h3>
-          <button class="btn follow-btn">Follow</button>
-        </div>
+        <section class="feed">
+            <h2>Feed</h2>
+            <div class="post">
+                <h3>Post Title</h3>
+                <p>This is the content of the post.</p>
+                <div class="post-actions">
+                    <button>Like</button>
+                    <button>Comment</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <div class="user">
-          <img src="default-pfp.png" alt="User 2" class="profile-pic">
-          <h3>Username2</h3>
-          <button class="btn follow-btn">Follow</button>
-        </div>
-
-        <!-- Add more users as needed -->
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2024 Natan. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2024 Natan | Privacy | Contact | Rules</p>
+    </footer>
 </body>
 </html>
