@@ -862,3 +862,78 @@ nav {
         padding: 8px 16px;
     }
 }
+body {
+    font-family: 'Noto Sans', sans-serif; /* Use Noto Sans font */
+    margin: 0;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+}
+
+.navbar {
+    background-color: #0056b3; /* Darker blue for navbar */
+    padding: 15px;
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the navbar items */
+}
+
+.navbar li {
+    margin: 0 15px; /* Space between items */
+}
+
+.navbar a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.text-container {
+    text-align: center; /* Center the text */
+    margin-top: 50px; /* Add space above the text */
+}
+
+.welcome-text {
+    font-size: 36px; /* Adjust font size */
+    font-weight: bold; /* Make it bold */
+}
+
+.description-text {
+    font-size: 20px; /* Adjust font size */
+    margin-top: 10px; /* Add space above the description */
+}
+
+.buttons-container {
+    margin-top: 20px; /* Add space above buttons */
+}
+
+.signup-button, .login-button {
+    background-color: #0056b3; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    margin: 0 10px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button text size */
+}
+
+.signup-button:hover, .login-button:hover {
+    background-color: #004494; /* Darker button color on hover */
+}
+
+footer {
+    text-align: center; /* Center footer text */
+    margin-top: 50px; /* Space above footer */
+    padding: 20px; /* Padding for footer */
+    background-color: #0056b3; /* Background color for footer */
+    position: relative; /* Position footer */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}
+
+footer p {
+    margin: 5px; /* Space between footer lines */
+}
