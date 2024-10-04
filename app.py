@@ -9,3 +9,19 @@ def register_submit():
     
     return 'Registration successful'
 flask run
+from flask import Flask, request, redirect, render_template
+
+app = Flask(__name__)
+
+@app.route('/register_submit', methods=['POST'])
+def register_submit():
+    username = request.form['username']
+    email = request.form['email']
+    password = request.form['password']
+    # Save user data logic here
+
+    # After successful registration
+    return render_template('success.html', username=username)
+
+if __name__ == '__main__':
+    app.run(debug=True)
