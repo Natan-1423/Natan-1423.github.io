@@ -1082,3 +1082,99 @@ footer {
     bottom: 0;
     width: 100%;
 }
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background for dark mode */
+    color: white; /* White text for dark mode */
+}
+
+header {
+    background-color: #1e1e1e; /* Darker header */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff; /* Blue links */
+}
+
+main {
+    padding-top: 60px; /* Space for fixed header */
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #2a2a2a; /* Dark search bar */
+    color: white; /* White text in search bar */
+    border: 1px solid #444; /* Dark border */
+}
+
+.top-users, .feed {
+    margin: 20px 0;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user {
+    border: 1px solid #444; /* Dark border for user cards */
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+footer {
+    background-color: #1e1e1e; /* Dark footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Light mode styles */
+.light-mode {
+    background-color: white; /* Light background */
+    color: black; /* Black text */
+}
+
+.light-mode header,
+.light-mode footer {
+    background-color: #f4f4f4; /* Light header/footer */
+}
+
+.light-mode .search-bar {
+    background-color: #ffffff; /* Light search bar */
+    color: black; /* Black text in search bar */
+    border: 1px solid #ddd; /* Light border */
+}
+
+.light-mode .user {
+    border: 1px solid #ddd; /* Light border for user cards */
+}
