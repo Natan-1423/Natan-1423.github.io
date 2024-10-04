@@ -1011,3 +1011,74 @@ nav {
 .nav-links a:hover {
     color: #007BFF; /* Hover color */
 }
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+}
+
+header {
+    background-color: #ffffff; /* White header */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff; /* Blue links */
+}
+
+main {
+    padding-top: 60px; /* Space for fixed header */
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.top-users, .feed {
+    margin: 20px 0;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user {
+    border: 1px solid #ddd;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333; /* Dark footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
