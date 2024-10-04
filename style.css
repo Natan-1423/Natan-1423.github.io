@@ -984,3 +984,30 @@ body.dark-mode .signup-button,
 body.dark-mode .login-button {
     background-color: #222; /* Darker button color for dark mode */
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* or whatever background color you prefer */
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 50px; /* Adjust size as necessary */
+    height: 50px; /* Adjust size as necessary */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000; /* Link color */
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Hover color */
+}
