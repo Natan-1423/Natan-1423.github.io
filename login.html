@@ -1,18 +1,8 @@
-from flask import Flask, request, redirect, url_for, render_template
-
-app = Flask(__name__)
-
-@app.route('/login')
-def login():
-    return render_template('login.html')
-
-@app.route('/login_submit', methods=['POST'])
-def login_submit():
-    username = request.form['username']
-    password = request.form['password']
-    # Authentication logic goes here
-    return redirect(url_for('home'))  # Redirect after login
-
-if __name__ == '__main__':
-    app.run(debug=True)
-<link rel="stylesheet" href="static/style.css">
+<div class="form-container">
+    <h2>Log In</h2>
+    <form action="/login_submit" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Log In</button>
+    </form>
+</div>
