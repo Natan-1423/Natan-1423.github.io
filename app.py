@@ -25,3 +25,20 @@ def register_submit():
 
 if __name__ == '__main__':
     app.run(debug=True)
+from flask import Flask, request, render_template, redirect
+
+app = Flask(__name__)
+
+@app.route('/register_submit', methods=['POST'])
+def register_submit():
+    username = request.form['username']
+    email = request.form['email']
+    password = request.form['password']
+    
+    # Process the registration logic here
+    # Redirect or return a success/failure message
+
+    return redirect('/success')  # Or any success page
+
+if __name__ == '__main__':
+    app.run(debug=True)
