@@ -70,3 +70,14 @@ def explore():
 
 if __name__ == '__main__':
     app.run(debug=True)
+users = [
+    {
+        'username': 'user1',
+        'banner': 'banner1.jpg',
+        'profile_pic': 'profile1.jpg',
+        'bio': 'This is user1\'s bio.',
+        'followers': 0,  # Change this to 0 for the test
+        'following': 0,
+        'posts': []
+    },
+]
