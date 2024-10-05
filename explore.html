@@ -63,3 +63,33 @@
     </div>
     <p>&copy; 2024 Natan</p>
 </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - Natan</title>
+</head>
+<body>
+    <h1>Explore Users</h1>
+    <div id="user-list">
+        {% for user in users %}
+            <div class="user">
+                <h2>{{ user.username }}</h2>
+                <div class="posts">
+                    {% if user.posts %}
+                        <h3>Posts:</h3>
+                        <ul>
+                            {% for post in user.posts %}
+                                <li>{{ post }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No posts yet!</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
