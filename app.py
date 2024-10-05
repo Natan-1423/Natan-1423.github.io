@@ -54,3 +54,19 @@ if __name__ == '__main__':
 |   |-- settings.html (Settings page)
 |   |-- banned.html (Banned User page)
 |-- app.py (Flask Backend)
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+# Dummy data for users and posts
+users = [
+    {'username': 'user1', 'posts': ['Hello world!', 'My first post!']},
+    {'username': 'user2', 'posts': []},
+]
+
+@app.route('/explore')
+def explore():
+    return render_template('explore.html', users=users)
+
+if __name__ == '__main__':
+    app.run(debug=True)
