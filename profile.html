@@ -3,70 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        // Check if user is logged in
-        var isLoggedIn = false; // Set this based on your login logic
-
-        if (!isLoggedIn) {
-            // Redirect to home page or login page
-            window.location.href = 'index.html'; // Change to your login page if necessary
+    <title>Profile - {{ user.username }} - Natan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
         }
-    </script>
+        .profile-header {
+            position: relative;
+            text-align: center;
+        }
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-image: url('{{ user.banner }}');
+            background-size: cover;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
+            position: absolute;
+            top: 150px; /* Adjust as necessary */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .user-info {
+            margin-top: 80px; /* Adjust for spacing */
+        }
+        .posts {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
+    <div class="profile-header">
+        <div class="banner"></div>
+        <img src="{{ user.profile_pic }}" alt="Profile Picture" class="profile-pic">
+    </div>
+    <div class="user-info">
+        <h1>{{ user.username }}</h1>
+        <p>{{ user.bio }}</p>
+        <p><strong>{{ user.followers }} Followers</strong> | <strong>{{ user.following }} Following</strong></p>
+    </div>
+    <div class="posts">
+        <h2>Posts:</h2>
+        {% if user.followers == 0 %}
+            <p>No posts yet.</p>
+        {% elif user.posts %}
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="profile.html" class="active">Profile</a></li>
-                <li><a href="rules.html">Rules</a></li>
+                {% for post in user.posts %}
+                    <li>{{ post }}</li>
+                {% endfor %}
             </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h1>Your Profile</h1>
-            <!-- Profile content goes here -->
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Natan. All rights reserved.</p>
-    </footer>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - Natan</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Your Profile</h1>
-    </header>
-    <div>
-        <img src="profile-picture.png" alt="Profile Picture" style="width: 100px;">
-        <h2>natan-1423</h2>
-        <p>Followers: 0 | Following: 0</p>
+        {% else %}
+            <p>No posts yet!</p>
+        {% endif %}
     </div>
 </body>
 </html>
-<div id="profile-content" style="display: none;">
-    <h1>Your Profile</h1>
-    <!-- Profile content goes here -->
-</div>
-<script>
-    if (isLoggedIn) {
-        document.getElementById('profile-content').style.display = 'block';
-    }
-</script>
-<div class="profile-pic" data-username="user1">U</div>
-<div class="profile-pic" data-username="user2">U</div>
