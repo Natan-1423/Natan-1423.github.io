@@ -4,27 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore - Natan</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            background-color: #ffffff; /* White background */
+            color: #000; /* Black text */
+            font-family: 'Noto Sans', sans-serif; /* Font family */
+        }
+        .navbar {
+            background-color: #f1f1f1; /* Light gray background for navbar */
+            padding: 10px;
+        }
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333; /* Dark text for links */
+        }
+        .user-card {
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f9f9f9; /* Slightly darker background for cards */
+        }
+        .user-card img {
+            width: 50px; /* Profile picture size */
+            height: 50px; /* Profile picture size */
+            border-radius: 50%; /* Round profile picture */
+        }
+        footer {
+            background-color: #f1f1f1; /* Footer background */
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/explore">Explore</a>
+        <a href="/signup">Sign Up</a>
+        <a href="/login">Log In</a>
+    </nav>
+
     <h1>Explore Users</h1>
-    <div id="user-list">
+
+    {% if users %}
         {% for user in users %}
-            <div class="user">
+            <div class="user-card">
+                <img src="{{ user.profile_pic }}" alt="Profile Picture">
                 <h2>{{ user.username }}</h2>
-                <div class="posts">
-                    {% if user.posts %}
-                        <h3>Posts:</h3>
-                        <ul>
-                            {% for post in user.posts %}
-                                <li>{{ post }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% else %}
-                        <p>No posts yet!</p>
-                    {% endif %}
-                </div>
+                <p><strong>Followers:</strong> {{ user.followers }}</p>
+                <p><strong>Bio:</strong> {{ user.bio }}</p>
+                <button onclick="reportUser('{{ user.username }}')">Report</button> <!-- Add a report button -->
             </div>
         {% endfor %}
-    </div>
+    {% else %}
+        <p>No users available. Please check back later!</p>
+    {% endif %}
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <p>&copy; 2024 Natan. All rights reserved.</p>
+            <p>
+                <a href="/privacy" style="margin-right: 15px;">Privacy Policy</a> | 
+                <a href="/rules" style="margin-right: 15px;">Community Guidelines</a> | 
+                <a href="/contact" style="margin-right: 15px;">Contact Us</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function reportUser(username) {
+            alert('Reporting user: ' + username);
+            // Add functionality to report the user
+        }
+    </script>
 </body>
 </html>
