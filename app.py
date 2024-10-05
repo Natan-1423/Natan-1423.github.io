@@ -81,3 +81,4 @@ users = [
         'posts': []
     },
 ]
+users = []  # This will result in "No users available" message.
