@@ -42,3 +42,15 @@ def register_submit():
 
 if __name__ == '__main__':
     app.run(debug=True)
+/natan-social-media
+|-- static/
+|   |-- uploads/
+|   |-- styles.css
+|   |-- scripts.js
+|-- templates/
+|   |-- index.html (Homepage)
+|   |-- explore.html (Explore page)
+|   |-- profile.html (User Profile page)
+|   |-- settings.html (Settings page)
+|   |-- banned.html (Banned User page)
+|-- app.py (Flask Backend)
